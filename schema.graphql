@@ -1,0 +1,73 @@
+type Epic_EntropyManagerUpdated {
+  id: ID!
+  entropyManagerAddress: String!
+}
+
+type Epic_EpicBoxBurned {
+  id: ID!
+  user: String!
+  epicBoxId: BigInt!
+}
+
+type Epic_LandTicketAdded {
+  id: ID!
+  landTicketId: BigInt!
+}
+
+type Epic_LandTicketRemoved {
+  id: ID!
+  landTicketId: BigInt!
+}
+
+type Epic_LandTicketTransferred {
+  id: ID!
+  user: String!
+  landTicketId: BigInt!
+}
+
+type Epic_MinMaxAssetsUpdated {
+  id: ID!
+  minAssets: BigInt!
+  maxAssets: BigInt!
+}
+
+type Epic_PlayerMinted {
+  id: ID!
+  user: String!
+  playerId: BigInt!
+}
+
+type Epic_ProbabilitiesUpdated {
+  id: ID!
+  landTicketProbability: BigInt!
+  scoutProbability: BigInt!
+  playerProbability: BigInt!
+}
+
+type Epic_RoleAdminChanged {
+  id: ID!
+  role: String!
+  previousAdminRole: String!
+  newAdminRole: String!
+}
+
+type Epic_RoleGranted {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type Epic_RoleRevoked {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type Epic_ScoutMinted {
+  id: ID!
+  user: String!
+  scoutId: BigInt!
+}
+

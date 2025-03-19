@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: epic
+networks:
+- id: 50
+  start_block: 0
+  contracts:
+  - name: Epic
+    address:
+    - 0x15c1af32541F0AcC4fBD2012407599Bbec6Fd8e4
+    handler: src/EventHandlers.ts
+    events:
+    - event: EntropyManagerUpdated(address entropyManagerAddress)
+    - event: EpicBoxBurned(address indexed user, uint256 epicBoxId)
+    - event: LandTicketAdded(uint256 landTicketId)
+    - event: LandTicketRemoved(uint256 landTicketId)
+    - event: LandTicketTransferred(address indexed user, uint256 landTicketId)
+    - event: MinMaxAssetsUpdated(uint256 minAssets, uint256 maxAssets)
+    - event: PlayerMinted(address indexed user, uint256 playerId)
+    - event: ProbabilitiesUpdated(uint256 landTicketProbability, uint256 scoutProbability, uint256 playerProbability)
+    - event: RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+    - event: RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+    - event: RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+    - event: ScoutMinted(address indexed user, uint256 scoutId)
+unordered_multichain_mode: true
